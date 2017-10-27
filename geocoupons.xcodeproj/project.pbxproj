@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		349E3CD11E01C6C0008120D3 /* path.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 349E3CD01E01C6C0008120D3 /* path.gpx */; };
 		34D38FE11DFCBE9A0096A92E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D38FE01DFCBE9A0096A92E /* main.m */; };
 		34D38FE41DFCBE9A0096A92E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D38FE31DFCBE9A0096A92E /* AppDelegate.m */; };
 		34D38FE71DFCBE9A0096A92E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D38FE61DFCBE9A0096A92E /* ViewController.m */; };
 		34D38FEA1DFCBE9A0096A92E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D38FE81DFCBE9A0096A92E /* Main.storyboard */; };
 		34D38FEC1DFCBE9A0096A92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D38FEB1DFCBE9A0096A92E /* Assets.xcassets */; };
 		34D38FEF1DFCBE9A0096A92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D38FED1DFCBE9A0096A92E /* LaunchScreen.storyboard */; };
+		34D38FF71DFCBECC0096A92E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D38FF61DFCBECC0096A92E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		349E3CD01E01C6C0008120D3 /* path.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = path.gpx; sourceTree = "<group>"; };
 		34D38FDC1DFCBE9A0096A92E /* geocoupons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geocoupons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D38FE01DFCBE9A0096A92E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		34D38FE21DFCBE9A0096A92E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		34D38FEB1DFCBE9A0096A92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34D38FEE1DFCBE9A0096A92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34D38FF01DFCBE9A0096A92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D38FF61DFCBECC0096A92E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D38FF71DFCBECC0096A92E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 		34D38FD31DFCBE9A0096A92E = {
 			isa = PBXGroup;
 			children = (
+				349E3CD01E01C6C0008120D3 /* path.gpx */,
+				34D38FF61DFCBECC0096A92E /* MapKit.framework */,
 				34D38FDE1DFCBE9A0096A92E /* geocoupons */,
 				34D38FDD1DFCBE9A0096A92E /* Products */,
 			);
@@ -105,11 +112,12 @@
 		34D38FD41DFCBE9A0096A92E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Hector Garcia";
 				TargetAttributes = {
 					34D38FDB1DFCBE9A0096A92E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6BC5T9S645;
 					};
 				};
 			};
@@ -137,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D38FEF1DFCBE9A0096A92E /* LaunchScreen.storyboard in Resources */,
+				349E3CD11E01C6C0008120D3 /* path.gpx in Resources */,
 				34D38FEC1DFCBE9A0096A92E /* Assets.xcassets in Resources */,
 				34D38FEA1DFCBE9A0096A92E /* Main.storyboard in Resources */,
 			);
@@ -191,8 +200,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -236,8 +247,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -265,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = geocoupons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hectorgarcia.geocoupons;
@@ -276,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = geocoupons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hectorgarcia.geocoupons;
@@ -302,6 +317,7 @@
 				34D38FF51DFCBE9A0096A92E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

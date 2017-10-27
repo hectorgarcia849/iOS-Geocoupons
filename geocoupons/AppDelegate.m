@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     return YES;
 }
 
@@ -40,6 +41,24 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    //using notification.alertBody uses the message we put into the notification we created in viewcontroller.m and passes it to this method as the message to use in the pop-up.  This constructs the alert.
+    
+    application.applicationIconBadgeNumber = 0;
+    
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Magic Spells Inc." message: notification.alertBody preferredStyle:UIAlertControllerStyleAlert];
+    
+    //adds Action button to alert
+    UIAlertAction *aa = [UIAlertAction actionWithTitle: @"Okay" style: UIAlertActionStyleDefault handler:nil];
+    
+    [ac addAction:aa];
+    
+    //make sure this alert gets run on the UI thread.  Presents to VC.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [application.keyWindow.rootViewController presentViewController:ac animated:YES completion:nil];
+    });
 }
 
 @end
